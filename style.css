@@ -1,0 +1,132 @@
+/* Style général pour le corps */
+body {
+    background-color: #FFEB3B; /* Fond jaune */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Junicode', serif; /* Applique la police Junicode */
+}
+
+/* Style du conteneur de calendrier */
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Style de la grille du calendrier */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Style général pour les jours de semaine */
+.day {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFEB3B; /* Même couleur que le fond du site */
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #333;
+    font-weight: 700;
+    font-style: italic;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Effet au survol des jours de semaine */
+.day:hover {
+    background-color: #f1c40f;
+    transform: scale(1.1);
+}
+
+/* Styles spécifiques aux jours de week-end et jours fériés */
+.weekend, .holiday {
+    border: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Style des images des week-ends et jours fériés */
+.day-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Style pour les boîtes de dialogue */
+.dialog-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.dialog-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Style du texte dans la boîte de dialogue */
+.dialog-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style de l'image dans la boîte de dialogue */
+.dialog-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Style du bouton de fermeture */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+}
+
+.close-button:hover {
+    color: #555;
+}
+/* Ajout d'un effet d'inclinaison au survol */
+.day:hover {
+    background-color: #f1c40f;
+    transform: scale(1.1) rotate(20deg); /* Ajuste l'angle selon la préférence */
+    transition: background-color 0.3s, transform 0.3s;
+}
